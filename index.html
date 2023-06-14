@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKY minerals</title>
+   <link href="kky.jpg" rel="icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <Style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            outline: 0px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .font1{
+            display: flex;
+            width: 40%;
+            height: 100%;
+            align-items: center;
+            text-indent: 30px;
+            justify-content: start;
+            font-size: 30px;
+            font-weight: 900;
+        }
+        .font1 i{
+            color: red;
+        }
+        .last{
+            display: flex;
+            width: 10%;
+            height: 100%;
+            align-items: center;
+            justify-content: space-around;
+            color: red;
+            font-size: 25px;
+        }
+        .last i{
+            color: red;
+        }
+        
+        .menu{
+            width: 100%;
+            height: 17vh;
+            background-color:rgb(245, 178, 92); 
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: fixed;
+            z-index: 10;
+            box-shadow: -3px -3px 10px 6px rgb(162, 154, 154);
+         
+        }
+       .mid{
+            display: flex;
+            width: 60%;
+            height: 100%;
+            color: red;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 35px;
+
+           
+       }
+       .banner{
+        width: 100%;
+        height: 100vh;
+        background: url(slider_tncorner.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+       background-position: fixed;
+        display: flex;
+      position: relative;
+    
+       }
+       .text{
+        position: absolute;
+        top:40vh;
+        color: white;
+        font-size:80px ;
+        font-weight: 900;
+       }
+       
+       .btn1{
+        width: 120px;
+        height: 45px;
+        background-color: red;
+        border-radius: 10px;
+        color: white;
+        border: 2px solid white;
+        position: absolute;
+        top: 60vh;
+        left: 250px;
+       }
+       .set{
+        display: none;
+       }
+       .unite{
+            display: none;
+            width: 130px;
+            height: 40vh;
+            background-color: rgb(236, 179, 103);
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 10;
+            
+            position: absolute;
+    
+          
+        }
+        .pic{
+            width: 99%;
+            height: 80vh;
+            border:2px solid white ;
+           position: absolute;
+           top: 110vh;
+        }
+       
+       
+        a{
+            color: rgb(97, 24, 24);
+            text-decoration: none;
+        }
+        a:hover{
+           
+            color: red;
+        }
+        .fix{
+            width: 30px;
+            height: 30vh;
+         
+            position: fixed;
+            top:50vh;
+            left: 95%;
+            z-index: 10;
+           
+        }
+        .z1{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+             transform-style: preserve-3d;
+            transition: all 1s;
+         
+        }
+        
+       
+        .z5{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid orange;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            background-color: orange;
+            position: fixed;
+            top: 90vh;
+        }
+        .z1:hover{
+            transform: rotate(360deg);
+        }
+     
+        .x{
+            position: absolute;
+            color: white;
+            font-size: 50px;
+            right: 0px;
+            bottom: 20px;
+        }
+        .x1{
+            position: absolute;
+            color: white;
+            font-size: 50px;
+            right: 90px;
+            bottom: 20px;
+        }
+        .name{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: 900;
+        }
+        .name .n{
+            color: rgb(211, 20, 20);
+        }
+       .pics{
+        height: 80%;
+         display: flex;
+         align-items: normal;
+         justify-content: space-around;
+         margin-top: 30px;
+         
+        }
+       .c1{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 18%;
+        height: 90%;
+        border: 1px solid red;
+        box-shadow: 0px 0px 5px 5px red;
+       
+        
+
+       }
+       .c11{
+        width: 80%;
+        height: 80%;
+        border: 2px solid white;
+        transition: all 1s;
+        background: url(pic1.webp);
+        background-size: 100% 100%;
+        background-position: center center;
+       
+       }
+       .c12{
+        width: 80%;
+        height: 80%;
+        border: 2px solid white;
+        transition: all 1s;
+        background: url(pic2.jpeg);
+        background-size: 100% 100%;
+        background-position: center center;
+       
+       }
+       .c13{
+        width: 80%;
+        height: 80%;
+        border: 2px solid white;
+        transition: all 1s;
+        background: url(pic3.jpg);
+        background-size: 100% 100%;
+        background-position: center center;
+       
+       }
+       .c14{
+        width: 80%;
+        height: 80%;
+        border: 2px solid white;
+        transition: all 1s;
+        background: url(white.jpeg);
+        background-size: 100% 100%;
+        background-position: center center;
+       
+       }
+       .c15{
+        width: 80%;
+        height: 80%;
+        border: 2px solid white;
+        transition: all 1s;
+        background: url(canada.jpg);
+        background-size: 100% 100%;
+        background-position: center center;
+       
+       }
+       .c11:hover{
+        background-size: 130% 130%;
+       opacity: 0.7;
+       }
+       .c12:hover{
+        background-size: 130% 130%;
+        opacity: 0.7;
+       }
+       .c13:hover{
+        background-size: 130% 130%;
+        opacity: 0.7;
+       }
+       .c14:hover{
+        background-size: 130% 130%;
+        opacity: 0.7;
+       
+       }
+       .c15:hover{
+        background-size: 130% 130%;
+        opacity: 0.7;
+       
+       }
+       .pic2{
+        width: 99%;
+        height: 70vh;
+        position: absolute;
+        top:190vh;
+        display: flex;
+        align-items: center;
+       
+        flex-direction: column;
+       }
+       .name2{
+       height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 900;
+        color: rgb(242, 15, 15);
+
+       }
+       .pics2{
+            width:80%;
+            height: 85%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           
+       }
+       .d1{
+        width:25%;
+        height: 90%;
+        box-shadow: 3px 3px 5px 5px rgb(179, 176, 176);
+        margin-top: -40px;
+       background-color: rgb(191, 52, 52);
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       flex-direction: column;
+       }
+       .d2{
+        width:30%;
+        height: 100%;
+        box-shadow: 3px 3px 5px 5px rgb(179, 176, 176);
+        background-color: rgb(191, 52, 52);
+        display: flex;
+       align-items: center;
+       justify-content: space-between;
+       flex-direction: column;
+       }
+       .d3{
+        width:25%;
+        height: 90%;
+        box-shadow: 3px 3px 5px 5px rgb(179, 176, 176);
+        margin-top: -40px;
+        background-color: rgb(191, 52, 52);
+        display: flex;
+       align-items: center;
+       justify-content: space-between;
+       flex-direction: column;
+       }
+       .d2:hover{
+            box-shadow: 2px 2px 10px 10px rgb(179, 176, 176) ;
+        }
+        .d1:hover{
+            box-shadow: 2px 2px 10px 10px rgb(179, 176, 176) ;
+        }
+        .d3:hover{
+            box-shadow: 2px 2px 10px 10px  rgb(179, 176, 176) ;
+        }
+        .pic3{
+            width: 99%;
+        height: 70vh;
+        position: absolute;
+        top:260vh;
+       
+        display: flex;
+        align-items: center;
+       justify-content: space-between;
+        flex-direction: column;
+        }
+        .pics3{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 90%;
+            width: 80%;
+            margin-top: 90px;
+            position: absolute;
+        }
+        .name3{
+            height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 900;
+        color: rgb(242, 15, 15);
+
+        }
+        .e1{
+            
+        width:25%;
+        height: 100%;
+       
+        margin-top: -40px;
+        border: 2px solid white;
+       box-shadow: 3px 3px 10px 10px rgb(179, 176, 176);
+       display: flex;
+       align-items: start;
+       
+       flex-direction: column;
+       }
+       .e2{
+            
+            width:25%;
+            height: 100%;
+           
+            margin-top: -40px;
+            border: 2px solid white;
+            box-shadow: 3px 3px 10px 10px rgb(179, 176, 176);
+           
+           display: flex;
+           align-items: start;
+           
+           flex-direction: column;
+           }
+           .e3{
+            
+            width:25%;
+            height: 100%;
+          
+            margin-top: -40px;
+            border: 2px solid white;
+            box-shadow: 3px 3px 10px 10px rgb(179, 176, 176);
+           
+           display: flex;
+           align-items: start;
+          
+           flex-direction: column;
+           }
+           .btn2{
+            width: 120px;
+            height: 30px;
+            background-color: rgb(242, 15, 15) ;
+            border-radius: 20px;
+           
+            border: 2px solid white;
+            /* margin-left: 140px; */
+           margin-top: 10px;
+           }
+           .btn2 a{
+            color: white;
+            font-size: 15px;
+            text-decoration: none;
+           }
+           .whatsapp{
+            width: 99%;
+            height: 40vh;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        position: absolute;
+        top:350vh;
+         
+    }
+    .whats{
+      
+        width: 80%;
+        height:100%;
+        margin-top: 50px;
+        display: flex;
+        align-items: normal;
+       justify-content: start;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 3px rgb(179, 176, 176);
+    }
+    .contact{
+        width: 90%;
+      align-items: start;
+        display: flex;
+        flex-direction: column;
+       
+
+    }
+    .us{
+        font-weight: 500;
+        font-size: 30px;
+        font-family: fantasy;
+       
+        margin-top: 30px;
+    }
+    .info{
+        word-spacing: 5px;
+        font-size: 20px;
+       
+    }
+    .contact button{
+        background-color: rgb(14, 195, 44);
+        width: 150px;
+        height: 35px;
+        color: white;
+        align-self: flex-end;
+        margin-top: 80px;
+        margin-right: 50px;
+        font-size: 22px;
+        border-radius: 20px;
+        border: 2px solid white;
+        box-shadow: 0px 0px 10px 3px rgb(179, 176, 176);
+    }
+    .login{
+        display: flex;
+        justify-content:center;
+        margin-bottom: 30px;
+        position: absolute;
+        top: 420vh;
+        width: 100%;
+        height: 80vh;
+        align-items: center;
+       
+    }
+    .login1{
+        width: 100%;
+        height: 100%;
+        border: 1px solid blue;
+        background: url(360_F_110626357_7K92hEJRtIg5lHjjpIoa0rju1Ijbybjv.jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .login2{
+        width: 50%;
+        height: 100%;
+        justify-content: center;
+    }
+    .login3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items:center;
+        width: 50%;
+        height: 100%;
+      
+        
+
+    }
+    .send{
+        font-size: 40px;
+        text-align: center;
+        margin-top: 150px;
+        color: white;
+    }
+    .query{
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        display: flex;
+       margin-left: 40px;
+
+    }
+    .query p{
+        color: orange;
+    }
+    button{
+        width: 80px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: brown;
+        color: white;
+    }
+    input[type=text],input[type=email]{
+        width: 500px;
+        height: 50px;
+        border: none;
+        outline: none;
+        border-bottom: 3px solid white;
+        background: transparent;
+        color: white;
+        font-size: 25px;
+    }
+    ::placeholder{
+        font-size: 25px;
+        color: orange;
+    }
+   textarea{
+    background: transparent;
+    border:  2px solid white;
+    font-size: 25px;
+    color: white;
+   }
+   .line1{
+            width: 0px;
+            height: 2px;
+            background-color: orangered;
+            position: absolute;
+            transition: all 2s;
+            left: 50%;
+        }
+        .g1{
+            position: relative;
+        }
+        .g1:hover .line1{
+            width: 100%;
+            left: 0%;
+        }
+        .unite a{
+            text-decoration: none;
+        }
+        .footer1{
+            width: 99%;
+            position: absolute;
+            top: 510vh;
+          
+            height: 70vh;
+            display: flex;
+            align-items: start;
+            justify-content: space-around;
+        }
+        .ams{
+            width: 50%;
+            height: 100%;
+           
+            display: flex;
+            align-items: start;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+        .about1{
+            width: 15%;
+            height: 30%;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+          
+        }
+        .myaccount{
+            width: 15%;
+            height: 20%;
+            display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+           
+        }
+        .h1{
+            font-size: 40px;
+            text-shadow: 2px 2px 7px  rgb(179, 176, 176) ;
+            display: flex;
+        }
+        .h1 p{
+            color: rgb(191, 52, 52);
+        }
+        .h2{
+            width: 100%;
+            height: 60%;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        
+         p{
+            color: rgb(33, 4, 61);
+            font-weight: 900;
+        }
+        .h3{
+            font-size: 25px;
+        }
+        .f4{
+            display: flex;
+        
+            
+        }
+       
+        .f5{
+            display: flex;
+        }
+        .f6{
+            display: flex;
+        }
+        .f7{
+            display: flex;
+        }
+        .f2:hover{
+            display: inline-block;
+            color:rgb(242, 15, 15);
+        }
+        .f4 p:hover {
+          
+            color:red;
+            
+
+        }
+    
+        .f5 p:hover{
+            color:rgb(242, 15, 15);
+        }
+        .f6 p:hover{
+            color:rgb(242, 15, 15);
+        }
+        .f7 p:hover{
+            color:rgb(242, 15, 15);
+        }
+        .a1{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .a1:hover{
+            color:rgb(242, 15, 15);
+        }
+        .copy{
+            width: 100%;
+            height: 10vh;
+            position: absolute;
+            top: 580vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           font-size: 20px;
+           font-weight: 900;
+        }
+        * {box-sizing: border-box}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 90%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.prev{
+    margin-left: 1200px;
+}
+.mySlides{
+    width: 100%;
+    height: 100vh;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+/* .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+} */
+
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+  
+}
+
+      
+    
+        
+@media screen and (max-width:700px){
+        
+    .font{
+              display: inline-block;
+              font-size: 30px;
+              color: black; 
+              margin-top: 80px;
+              margin-left: -40px;
+              z-index: 10;
+
+              
+              
+            }
+            .mid{
+                display: none;
+            }
+           .set{
+            display: block;
+           }
+           
+           
+            .font:hover .unite {
+               display: flex; 
+
+            }   
+            a:hover{
+            text-decoration: none;
+            color: red;
+            
+        }
+        .font1{
+            font-size: 25px;
+            text-indent: 5px;
+        }
+        .last{
+            width: 20%;
+        }
+       
+        .text{
+            font-size: 45px;
+            top: 70vh;
+        }
+        .btn1{
+            top:95vh ;
+            
+        }
+        .pic{
+            top: 100vh;
+            height: 430vh;
+        }
+        .pic2{
+            top: 530vh;
+        }
+        .pics{
+            height: 400vh;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            
+           
+        }
+        .c1{
+            width: 300px;
+            height: 500px;
+        }
+        
+        .name{
+           
+            height: 5%;
+        }
+        .pics2{
+            width: 90%;
+        }
+        .d1{
+            width: 30%;
+        }
+        .d2{
+            width: 30%;
+        }
+        .d3{
+            width: 30%;
+        }
+        .pic3{
+            top: 600vh;
+        }
+        .pics3{
+            height: 80%;
+            justify-content: space-between;
+            margin-top: 80px;
+            width: 100%;
+        }
+        .btn2{
+            margin-left: 30px;
+            width: 70%;
+        }
+        .whatsapp{
+            top: 670vh;
+        }
+        .contact{
+            align-items: start;
+            font-size: 10px;
+        }
+        .login{
+            top:750vh;
+            height: 70vh;
+            width: 99%;
+           
+        }
+       .send{
+        font-size: 25px;
+
+       }
+       .query{
+        font-size: 15px;
+       margin-left: 40px;
+       }
+       input[type=text],input[type=email]{
+        width: 330px;
+       }
+       textarea{
+        width:98%;
+        height: 60%;
+       }
+       button{
+        margin-top: -100px;
+        margin-left:-150px;
+       }
+       .us{
+        font-size: 20px;
+       }
+       .info{
+        font-size: 15px;
+       }
+       .footer1{
+        top: 830vh;
+       }
+       .ams{
+        width: 60%;
+       }
+       
+       .h2{
+        font-size: 15px;
+       }
+      .about1{
+        height: 50%;
+      }    
+      .a1{
+        font-size: 15px;
+      }
+      .copy{
+        top:900vh;
+      }
+      .prev{
+        margin-left: 520px;
+      }
+     
+    
+          
+        }
+       
+    </Style>
+</head>
+<body>
+    
+    <div class="con1">
+        <div class="menu">
+            <div class="set">
+                <div class="ban">
+                    <div class="font"><i class="fa-solid fa-bars"></i>
+                   
+                        <nav class="unite">
+                            <div class="g1"><a href="http://127.0.0.1:5500/index.html#">home</a>
+                            <div class="line1"></div></div>
+                            <div class="g1"><a href="http://127.0.0.1:5500/mainlogin.html?#">login</a>
+                            <div class="line1"></div></div>
+                            <div class="g1"><a href="http://127.0.0.1:5500/maincollection.html#" >collections</a>
+                            <div class="line1"></div></div>
+                            <div class="g1"><a href="http://127.0.0.1:5500/maingallery.html#">Gallery</a>
+                            <div class="line1"></div></div>
+                            <div class="g1"><a href="http://127.0.0.1:5500/mainbout.html#" >about</a>
+                            <div class="line1"></div></div>
+                            <div class="g1"><a href="http://127.0.0.1:5500/maincontact.html#">contact</a>
+                            <div class="line1"></div></div>
+                          
+                        </nav>
+                       
+                </div>  
+                
+           
+            </div>
+            </div>
+        <div class="font1">
+            <div><i class="fa-solid fa-gem"></i>KKY MINERALS</div>
+           
+        </div>
+
+       <div class="mid">
+        <a href="http://127.0.0.1:5500/index.html#">home</a>
+        <a href="http://127.0.0.1:5500/maincollection.html#">collections</a>
+        <a href="http://127.0.0.1:5500/maingallery.html#">Gallery</a>
+       <a href="http://127.0.0.1:5500/mainbout.html#">about</a>
+        <a href="http://127.0.0.1:5500/maincontact.html#" >contact</a>
+       <a href="http://127.0.0.1:5500/mainlogin.html?#">login</a>
+       </div>
+       <div class="last">
+        <div><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div><a href="http://127.0.0.1:5500/mainlogin.html?#"><i class="fa-solid fa-user-plus"></i></a></div>
+       </div>
+        </div>
+    </div>
+           
+   
+    
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="slider_tncorner.png" style="width:100%;height:100%">
+          <div class="text">best collections...</div>
+          <a href="http://127.0.0.1:5500/maingallery.html#"><button class="btn1">explore now</button></a>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="canada.jpg" style="width:100%;height:100%">
+          <div class="text" style="color: red;">Cheap Prices...</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="ban1.jpg" style="width:100%;height:100%">
+          <div class="text" style="color: red;">Various Categories...</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)"><i class="x fa-solid fa-square-caret-left"></i></a>
+        <a class="next" onclick="plusSlides(1)"><i class="x fa-solid fa-square-caret-right"></i></a>
+        
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+          </div>
+       
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        setInterval(showSlides,100)
+        </script>
+   <div class="fix">
+    <p  class="z1"style="color: white;background-color: rgb(52, 52, 182) ; border: 2px solid   rgb(52, 52, 182);"><i class="fa-brands fa-linkedin"onclick="link()"></i></p>
+    <br>
+     <p  class="z1"style="color: white;background-color:  rgb(52, 52, 182); border: 2px solid  rgb(52, 52, 182);"><i class="fa-brands fa-facebook" onclick="face()"></i></p>
+     <br>
+      <p  class="z1"style="color: white;background-color:  rgb(52, 52, 182); border: 2px solid   rgb(52, 52, 182);"><i class="fa-brands fa-twitter"onclick="twit()"></i></p><br>
+      <p class="z1" style=" color: white;background-color: rgb(240, 35, 70); border: 2px solid  rgb(240, 35, 70);"><i class="fa-brands fa-instagram" onclick="insta()"></i></p><br>
+      <br>
+      <span class="z5" >
+        <i class="fa-solid fa-chevron-up" onclick="hide(this)"></i>
+      </span>
+      <script>
+        function hide(e){
+           
+            let br=document.querySelectorAll("p.z1")
+          if(e.classList.contains("fa-chevron-up")){
+            e.className="fa-solid fa-xmark"
+           
+            for(let i=0;i<br.length;i++){
+            br[i].style.display="none"
+          }
+          }
+          else{
+            e.className="fa-solid fa-chevron-up"
+            for(let i=0;i<br.length;i++){
+            br[i].style.display="flex"
+          }
+          }
+         
+        } 
+        
+        function insta(){
+                    window.location="https://www.instagram.com/explore/tags/minerals/"
+                }
+        function face(){
+                    window.location="https://www.facebook.com/minerals.net/"
+                }
+        function link(){
+                    window.location="https://rs.linkedin.com/company/mineral-resources-trading-&-services"
+                }
+        function twit(){
+            window.location="https://twitter.com/MinerMaterials"
+        }
+            
+      </script>
+   </div>
+     <div class="pic">
+        <div class="name"><div class="n">Featured </div>&nbsp; Categories</div>
+        <div class="pics">
+            <div class="c1">
+                <div class="c11">
+                   
+                </div>
+                <div style="font-size: 25px;color: black;font-weight: 600;">This stone is precious</div>
+            </div>
+            <div class="c1">
+                <div class="c12"></div>
+                <div style="font-size: 25px;color:black;font-weight: 600;">This stone is precious</div>
+            </div>
+            <div class="c1">
+                <div class="c13"></div>
+                <div style="font-size: 25px;color:black;font-weight: 600;">This stone is precious</div>
+            </div>
+            <div class="c1">
+                <div class="c14"></div>
+                <div style="font-size: 25px;color: black;font-weight: 600;">This stone is precious</div>
+            </div>
+            <div class="c1">
+                <div class="c15"></div>
+                <div style="font-size: 25px;color: black;font-weight: 600;">This stone is precious</div>
+            </div>
+        </div>
+    </div>
+     <div class="pic2">
+        <div class="name2">Top 3 categories</div>
+        <div class="pics2">
+            <div class="d1">
+                <img src="pic1.webp" width="100%" height="80%"/>
+                <div style="font-size: 20px; color: white;">This stone is precious</div>
+            </div>
+            <div class="d2">
+                <img src="pic2.jpeg" width="100%" height="85%"/>
+                <div style="font-size: 20px; color: white;">This stone is precious</div>
+            </div>
+            <div class="d3">
+                <img src="pic3.jpg" width="100%" height="80%"/>
+                <div style="font-size: 20px; color: white;">This stone is precious</div>
+            </div>
+        </div>
+    </div>
+     <div class="pic3">
+        <div class="name3">Top Collections</div>
+        <div class="pics3">
+            <div class="e1">
+                <img src="pic1.webp" width="100%" height="70%"/>
+                <div style="font-size: 20px; color: black; font-weight: 600;">This stone is precious</div>
+                <div style="font-size: 20px; color: black; font-weight: 600;">CODE NO :101</div>
+                <div style="font-size: 20px; color: black; font-weight: 600;">$2100</div>
+                <button class="btn2"><a href="#">Buy now </a><i class="fa-solid fa-unlock"></i></button>
+            </div>
+            <div class="e2">
+                <img src="pic2.jpeg" width="100%" height="70%"/>
+                <div style="font-size: 20px; color: black; font-weight: 600;">This stone is precious</div>
+                <div style="font-size: 20px; color: black; font-weight: 600;">CODE NO :102</div>
+                <div style="font-size: 20px; color: black; font-weight: 600;">$4100</div>
+                <button class="btn2"><a href="#">Buy now </a> <i class="fa-solid fa-unlock"></i></button>
+            
+            </div>
+            <div class="e3">
+                <img src="pic3.jpg" width="100%" height="65%"/>
+                <div style="font-size: 20px; color: black; font-weight: 600;">This stone is precious</div>
+                <div style="font-size: 20px; color: black; font-weight: 600;">CODE NO :103</div>
+                <div style="font-size: 20px; color: black; font-weight: 600;">$3100</div>
+                <button class="btn2"><a href="#">Buy now </a><i class="fa-solid fa-unlock"></i></button>
+            </div>
+        </div>
+    </div>
+    
+     <div class="whatsapp">
+        <div class="whats">
+            <div><img src="whats.png"width="100%"height="100%"/></div>
+            <div class="contact">
+                <div class="us">contact us on whatsapp<i class="fa-brands fa-whatsapp"></i></div>
+                <div class="info">if u want to ask any question related to our goods and Delivery so you can contact us on whatsapp</div>
+                <button>whatsapp<i class="fa-brands fa-whatsapp"></i></button>
+            </div>
+        </div>
+       </div>
+        <div class="login">
+            <div class="login1">
+                <div class="login2">
+                    <div class="send">send us a message<i class="fa-solid fa-envelope"></i></div>
+                    <div class="query">Ask your any&nbsp;<p>Query</p>&nbsp;by sending us a Message</div>
+                </div> 
+                <div class="login3">
+                    <div class="name"><input type="text"placeholder="your name"  ></div>
+                    <div class="email"><input type="email"placeholder=" enter email"> </div>
+                    <div  > <textarea cols="35" rows="8" placeholder="your address"></textarea> </div>
+                    <button>send</button>
+                </div> 
+        </div>
+    </div>
+    <div class="footer1">
+        <div class="ams">
+            <div class="h1"><i class="fa-solid fa-gem"></i>KKY&nbsp;<p>minerals</p></div>
+            <div class="h2">
+            <div class="f1" > Follow Us </div>
+            <span class="f2" style="width:6%"><i class="fa-brands fa-facebook-f"></i>  <i class="fa-brands fa-instagram"></i></span>
+            <div class="f3">Contact</div>
+            <div class="f4"><p><i class="fa-solid fa-map"></i>Location:ajanta caves market ,Ajantha 431117 ,maharasthra,india</p></div>
+            <div class="f5"><p><i class="fa-solid fa-phone"></i>Phone:+91-7020577657</p></div>
+            <div class="f6"><p><i class="fa-brands fa-whatsapp"></i> WhatsApp: +91-9588688337</p></div>
+            <div class="f7"><p><i class="fa-solid fa-envelope"></i>E-Mail: kkyminerals7@gmail.com</p></div>
+
+        </div>
+        <div class="h3">
+            <div>secured payment gateways</div>
+            <div style="text-align: center;"><img src="download.png"width="190px"height="100px"></div>
+        </div>
+        </div>
+        <div class="about1">
+            <div  class="a2"style="font-size: 30px;font-weight: 700;">About Us</div>
+            <div class="a1">Delivery Information</div>
+            <div class="a1">Terms & conditions</div>
+            <div class="a1">Contact Us</div>
+        </div>
+        <div class="myaccount">
+            <div  style="font-size: 30px;font-weight: 700;">Login</div>
+            <div class="a1">Sign Up</div>
+            <div class="a1">Help</div>
+        </div>
+    </div>
+    <div class="copy">
+       <div style="font-size: 25px; margin-top: -23px;">&copy </div> <div>All Copyrights 2022 <i class="fa-solid fa-gem"></i>KKY Minerals <br>
+
+            Designed & Developed by c yasodha  <i class="fa-brands fa-instagram"></i></div> </div>
+    </div>
+        
+    
+</body>
+</html>

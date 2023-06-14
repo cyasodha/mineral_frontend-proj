@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKY minerals</title>
+    <link href="kky.jpg" rel="icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         *{
+            padding: 0px;
+            margin: 0px;
+            outline: 0px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .font1{
+            display: flex;
+            width: 40%;
+            height: 100%;
+            align-items: center;
+            text-indent: 30px;
+            justify-content: start;
+            font-size: 30px;
+            font-weight: 900;
+        }
+        .font1 i{
+            color: red;
+        }
+        .last{
+            display: flex;
+            width: 10%;
+            height: 100%;
+            align-items: center;
+            justify-content: space-around;
+            color: red;
+            font-size: 25px;
+        }
+        .last i{
+            color: red;
+        }
+        .menu{
+            width: 100%;
+            height: 17vh;
+            background-color:rgb(245, 178, 92); 
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: fixed;
+            z-index: 10;
+            box-shadow: -3px -3px 10px 6px rgb(162, 154, 154);
+         
+        }
+       .mid{
+            display: flex;
+            width: 60%;
+            height: 100%;
+            color: red;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 35px;
+
+           
+       }
+       .set{
+        display: none;
+       }
+       .unite{
+            display: none;
+            width: 130px;
+            height: 40vh;
+            background-color: rgb(236, 179, 103);
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 10;
+            
+            position: absolute;
+    
+          
+        }
+        a{
+            color: rgb(97, 24, 24);
+            text-decoration: none;
+        }
+        a:hover{
+          
+            color: red;
+        }
+        .line1{
+            width: 0px;
+            height: 2px;
+            background-color: orangered;
+            position: absolute;
+            transition: all 2s;
+            left: 50%;
+        }
+        .g1{
+            position: relative;
+        }
+        .g1:hover .line1{
+            width: 100%;
+            left: 0%;
+        }
+        .ban2{
+            width: 100%;
+            height: 50vh;
+           
+        }
+        .img2{
+            width: 100%;
+            height: 100%;
+            background:linear-gradient(rgba(124,124,124,0.3),rgba(124,124,124,0.3)), url(ban1.jpg);
+            background-size: 100% ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+        
+        }
+        .pic3{
+            width: 99%;
+        height: 70vh;
+        position: absolute;
+        top:50vh;
+       
+        display: flex;
+        align-items: center;
+       justify-content: space-between;
+        flex-direction: column;
+        }
+        .pics3{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 90%;
+            width: 80%;
+            margin-top: 90px;
+            position: absolute;
+        }
+        .name3{
+            height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 900;
+        color: rgb(242, 15, 15);
+
+        }
+        .e1{
+            
+        width:25%;
+        height: 100%;
+       
+        margin-top: -40px;
+        border: 2px solid white;
+       box-shadow: 3px 3px 10px 10px rgb(179, 176, 176);
+       display: flex;
+       align-items: start;
+       
+       flex-direction: column;
+       }
+       .e2{
+            
+            width:25%;
+            height: 100%;
+           
+            margin-top: -40px;
+            border: 2px solid white;
+            box-shadow: 3px 3px 10px 10px rgb(179, 176, 176);
+           
+           display: flex;
+           align-items: start;
+           
+           flex-direction: column;
+           }
+           .e3{
+            
+            width:25%;
+            height: 100%;
+          
+            margin-top: -40px;
+            border: 2px solid white;
+            box-shadow: 3px 3px 10px 10px rgb(179, 176, 176);
+           
+           display: flex;
+           align-items: start;
+          
+           flex-direction: column;
+           }
+           .btn2{
+            width: 120px;
+            height: 30px;
+            background-color: rgb(242, 15, 15) ;
+            border-radius: 20px;
+            
+            border: 2px solid white;
+            /* margin-left: 140px; */
+           margin-top: 10px;
+           }
+           .btn2 a{
+            color: white;
+            font-size: 15px;
+            text-decoration: none;
+           }
+           .login{
+        display: flex;
+        justify-content:center;
+        margin-bottom: 30px;
+        position: absolute;
+        top: 150vh;
+        width: 100%;
+        height: 80vh;
+        align-items: center;
+       
+    }
+    .login1{
+        width: 100%;
+        height: 100%;
+        border: 1px solid blue;
+        background: url(360_F_110626357_7K92hEJRtIg5lHjjpIoa0rju1Ijbybjv.jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .login2{
+        width: 50%;
+        height: 100%;
+        justify-content: center;
+    }
+    .login3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items:center;
+        width: 50%;
+        height: 100%;
+      
+        
+
+    }
+    .send{
+        font-size: 40px;
+        text-align: center;
+        margin-top: 150px;
+        color: white;
+    }
+    .query{
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        display: flex;
+       margin-left: 40px;
+
+    }
+    .query p{
+        color: orange;
+    }
+    button{
+        width: 80px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: brown;
+        color: white;
+    }
+    input[type=text],input[type=email]{
+        width: 500px;
+        height: 50px;
+        border: none;
+        outline: none;
+        border-bottom: 3px solid white;
+        background: transparent;
+        color: white;
+        font-size: 25px;
+    }
+    ::placeholder{
+        font-size: 25px;
+        color: orange;
+    }
+   textarea{
+    background: transparent;
+    border:  2px solid white;
+    font-size: 25px;
+    color: white;
+   }
+           .footer1{
+            width: 99%;
+            position: absolute;
+            top: 250vh;
+          
+            height: 70vh;
+            display: flex;
+            align-items: start;
+            justify-content: space-around;
+        }
+        .ams{
+            width: 50%;
+            height: 100%;
+           
+            display: flex;
+            align-items: start;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+        .about1{
+            width: 15%;
+            height: 30%;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+          
+        }
+        .myaccount{
+            width: 15%;
+            height: 20%;
+            display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+           
+        }
+        .h1{
+            font-size: 40px;
+            text-shadow: 2px 2px 7px  rgb(179, 176, 176) ;
+            display: flex;
+        }
+        .h1 p{
+            color: rgb(191, 52, 52);
+        }
+        .h2{
+            width: 100%;
+            height: 60%;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        
+         p{
+            color: rgb(33, 4, 61);
+            font-weight: 900;
+        }
+        .h3{
+            font-size: 25px;
+        }
+        .f4{
+            display: flex;
+        
+            
+        }
+       
+        .f5{
+            display: flex;
+        }
+        .f6{
+            display: flex;
+        }
+        .f7{
+            display: flex;
+        }
+        .f2:hover{
+            display: inline-block;
+            color:rgb(242, 15, 15);
+        }
+        .f4 p:hover {
+          
+            color:red;
+            
+
+        }
+    
+        .f5 p:hover{
+            color:rgb(242, 15, 15);
+        }
+        .f6 p:hover{
+            color:rgb(242, 15, 15);
+        }
+        .f7 p:hover{
+            color:rgb(242, 15, 15);
+        }
+        .a1{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .a1:hover{
+            color:rgb(242, 15, 15);
+        }
+        .copy{
+            width: 100%;
+            height: 10vh;
+            position: absolute;
+            top: 320vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           font-size: 20px;
+           font-weight: 900;
+        }
+      
+    
+       
+        
+
+       @media screen and (max-width:700px){
+        
+        .font{
+                  display: inline-block;
+                  font-size: 30px;
+                  color: black; 
+                  margin-top: 80px;
+                  margin-left: -40px;
+                  z-index: 10;
+    
+                  
+                  
+                }
+                a{
+            text-decoration: none;
+        }
+                .mid{
+                    display: none;
+                }
+               .set{
+                display: block;
+               }
+               .font:hover .unite {
+               display: flex; 
+
+            }
+            .font1{
+            font-size: 25px;
+            text-indent: 5px;
+        }
+        .last{
+            width: 20%;
+        }
+            .pic3{
+            top: 50vh;
+        }
+        .pics3{
+            height: 80%;
+            justify-content: space-between;
+            margin-top: 80px;
+            width: 100%;
+        }
+        .btn2{
+            margin-left: 40px;
+            width: 70%;
+        }
+        .login{
+            top:130vh;
+            height: 70vh;
+            width: 99%;
+           
+        }
+       .send{
+        font-size: 25px;
+
+       }
+       .query{
+        font-size: 15px;
+       margin-left: 40px;
+       }
+       input[type=text],input[type=email]{
+        width: 330px;
+       }
+       textarea{
+        width:98%;
+        height: 60%;
+       }
+       .footer1{
+        top: 210vh;
+       }
+       .ams{
+        width: 60%;
+       }
+       
+       .h2{
+        font-size: 15px;
+       }
+      .about1{
+        height: 50%;
+      }    
+      .a1{
+        font-size: 15px;
+      }
+      .copy{
+        top:280vh;
+      }
+            }      
+               
+    </style>
+</head>
+<body>
+    <div class="con1">
+        <div class="menu">
+            <div class="set">
+                <div class="ban">
+                    <div class="font"><i class="fa-solid fa-bars"></i>
+                   
+                        <nav class="unite">
+                            <div class="g1"><a href="http://127.0.0.1:5500/index.html#">home</a>
+                            <div class="line1"></div></div>
+                            <div class="g1"><a href="http://127.0.0.1:5500/mainlogin.html?#">login</a>
+                            <div class="line1"></div></div>
+                            <div class="g1"><a href="http://127.0.0.1:5500/maincollection.html#" >collection</a>
+                            <div class="line1"></div></div>
+                            <div class="g1"><a href="http://127.0.0.1:5500/maingallery.html#">Gallery</a>
+                            <div class="line1"></div></div>
+                            <div class="g1"><a href="http://127.0.0.1:5500/mainbout.html#" >about</a>
+                            <div class="line1"></div></div>
+                            <div class="g1"><a href="http://127.0.0.1:5500/maincontact.html#">contact</a>
+                            <div class="line1"></div></div>
+                           
+                        </nav>
+                       
+                </div>  
+                
+           
+            </div>
+            </div>
+        <div class="font1">
+            <div><i class="fa-solid fa-gem"></i>KKY MINERALS</div>
+           
+        </div>
+
+       <div class="mid">
+        <a href="http://127.0.0.1:5500/index.html#">home</a>
+        <a href="http://127.0.0.1:5500/maincollection.html#">collections</a>
+        <a href="http://127.0.0.1:5500/maingallery.html#">Gallery</a>
+       <a href="http://127.0.0.1:5500/mainbout.html#">about</a>
+        <a href="http://127.0.0.1:5500/maincontact.html#" >contact</a>
+       <a href="http://127.0.0.1:5500/mainlogin.html?#">login</a>
+       </div>
+       <div class="last">
+        <div><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div><a href="http://127.0.0.1:5500/mainlogin.html?#"><i class="fa-solid fa-user-plus"></i></a></div>
+       </div>
+        </div>
+    </div>
+    <div class="ban2">
+        <div class="img2">
+            <div style="font-size: 70px;font-weight: 900;">#collection</div>
+            <div style="font-size: 20px; font-weight: 600;">All Listed Products Are Here...</div>
+        </div>
+    </div>
+    <div class="pic3">
+        <div class="name3">Top Collections</div>
+        <div class="pics3">
+            <div class="e1">
+                <img src="pic1.webp" width="100%" height="70%"/>
+                <div style="font-size: 20px; color: black; font-weight: 600;">This stone is precious</div>
+                <div style="font-size: 20px; color: black; font-weight: 600;">CODE NO :101</div>
+                <div style="font-size: 20px; color: black; font-weight: 600;">$2100</div>
+                <button class="btn2"><a href="#">Buy now </a> <i class="fa-solid fa-unlock"></i></button>
+            </div>
+            <div class="e2">
+                <img src="pic2.jpeg" width="100%" height="70%"/>
+                <div style="font-size: 20px; color: black; font-weight: 600;">This stone is precious</div>
+                <div style="font-size: 20px; color: black; font-weight: 600;">CODE NO :102</div>
+                <div style="font-size: 20px; color: black; font-weight: 600;">$4100</div>
+                <button class="btn2"><a href="#">Buy now </a><i class="fa-solid fa-unlock"></i></button>
+            
+            </div>
+            <div class="e3">
+                <img src="pic3.jpg" width="100%" height="65%"/>
+                <div style="font-size: 20px; color: black; font-weight: 600;">This stone is precious</div>
+                <div style="font-size: 20px; color: black; font-weight: 600;">CODE NO :103</div>
+                <div style="font-size: 20px; color: black; font-weight: 600;">$3100</div>
+                <button class="btn2"><a href="#">Buy now </a> <i class="fa-solid fa-unlock"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="login">
+        <div class="login1">
+            <div class="login2">
+                <div class="send">send us a message<i class="fa-solid fa-envelope"></i></div>
+                <div class="query">Ask your any&nbsp;<p>Query</p>&nbsp;by sending us a Message</div>
+            </div> 
+            <div class="login3">
+                <div class="name"><input type="text"placeholder="your name"  ></div>
+                <div class="email"><input type="email"placeholder=" enter email"> </div>
+                <div  > <textarea cols="35" rows="8" placeholder="your address"></textarea> </div>
+                <button>send</button>
+            </div> 
+    </div>
+</div>
+<div class="footer1">
+    <div class="ams">
+        <div class="h1"><i class="fa-solid fa-gem"></i>KKY&nbsp;<p>minerals</p></div>
+        <div class="h2">
+        <div class="f1" > Follow Us </div>
+        <span class="f2" style="width:6%"><i class="fa-brands fa-facebook-f"></i>  <i class="fa-brands fa-instagram"></i></span>
+        <div class="f3">Contact</div>
+        <div class="f4"><p><i class="fa-solid fa-map"></i>Location:ajanta caves market ,Ajantha 431117 ,maharasthra,india</p></div>
+        <div class="f5"><p><i class="fa-solid fa-phone"></i>Phone:+91-7020577657</p></div>
+        <div class="f6"><p><i class="fa-brands fa-whatsapp"></i> WhatsApp: +91-9588688337</p></div>
+        <div class="f7"><p><i class="fa-solid fa-envelope"></i>E-Mail: kkyminerals7@gmail.com</p></div>
+
+    </div>
+    <div class="h3">
+        <div>secured payment gateways</div>
+        <div style="text-align: center;"><img src="download.png"width="190px"height="100px"></div>
+    </div>
+    </div>
+    <div class="about1">
+        <div  class="a2"style="font-size: 30px;font-weight: 700;">About Us</div>
+        <div class="a1">Delivery Information</div>
+        <div class="a1">Terms & conditions</div>
+        <div class="a1">Contact Us</div>
+    </div>
+    <div class="myaccount">
+        <div  style="font-size: 30px;font-weight: 700;">Login</div>
+        <div class="a1">Sign Up</div>
+        <div class="a1">Help</div>
+    </div>
+</div>
+<div class="copy">
+    <div style="font-size: 25px; margin-top: -23px;">&copy </div> <div>All Copyrights 2022 <i class="fa-solid fa-gem"></i>KKY Minerals <br>
+ 
+         Designed & Developed by c yasodha  <i class="fa-brands fa-instagram"></i></div> </div>
+ </div>
+    
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>KKY minerals</title>
+    <link href="kky.jpg" rel="icon"/>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            outline: 0px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+       
+        .menu{
+            width: 100%;
+            height: 17vh;
+            background-color:rgb(245, 178, 92); 
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .font1{
+            display: flex;
+            width: 40%;
+            height: 100%;
+            align-items: center;
+            text-indent: 30px;
+            justify-content: start;
+            font-size: 30px;
+            font-weight: 600;
+
+        }
+        .font1 i{
+            color: red;
+        }
+        .mid{
+            display: flex;
+            width: 60%;
+            height: 100%;
+            color: red;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 35px;
+           
+
+       }
+      
+       .set{
+        display: none;
+       }
+       .unite{
+        position: absolute;
+            display: none;
+            width: 130px;
+            height: 40vh;
+            background-color: rgb(236, 179, 103);
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 10;
+          
+    
+          
+        }
+        .last{
+            display: flex;
+            width: 10%;
+            height: 100%;
+            align-items: center;
+            justify-content: space-around;
+            color: red;
+            font-size: 25px;
+        }
+        .last i{
+            color: red;
+        }
+        .nav{
+            width:40%;
+            height: 7vh;
+            color: red;
+            position: absolute;
+            display: inline-block;
+           top: 3.5vh;
+            animation: demo 20s infinite;
+        }
+       
+       
+        .bore{
+            width: 30%;
+            height: 80%;
+            
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            flex-direction: column;
+           background-color: antiquewhite;
+
+            
+            
+        }
+        .bg{
+            width: 30%;
+            height: 80%;
+            /* border: 2px solid  rgb(240, 75, 75) ; */
+            background: url(pink.jfif);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;  
+        }
+       .cont{
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+         
+          
+           
+             
+        }
+        .mmid{
+            display: none;
+           
+        }
+        .bore1{
+            width: 80%;
+            height: 90%;
+            border: 2px solid antiquewhite;
+
+        }
+       
+        a{
+            color: rgb(129, 26, 26);
+            text-decoration: none;
+        }
+        a:hover{
+           
+            color: red;
+        }
+        .start{
+           height: 20%;
+           margin-top: 30px;
+           font-family: Arial, Helvetica, sans-serif;
+           font-size: 25px;
+           font-weight: 600;
+           display: flex;
+           flex-direction: column;
+           
+          
+
+        }
+        .jp{
+          height: 80%;
+
+        }
+        .startline{
+            width: 25px;
+            height: 2px;
+            background-color: rgb(238, 90, 90);
+            /* box-shadow: -1px 1px 2px 1px  rgb(238, 90, 90); */
+        }
+       .input{
+        width: 50%;
+        height: 30%;
+        padding-top: 30px;
+       }
+       .if{
+        width: 15%;
+        height: 30px;
+        position: absolute;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid rgb(238, 25, 25);
+        padding-left: 30px;
+      
+       }
+       .icon{
+        position: absolute;
+        z-index: 10;
+        color: rgb(238, 90, 90) ;
+        font-size: 20px;
+        margin-top: 5px;
+       
+       }
+       ::placeholder{
+       font-size: 15px;
+      
+       }
+       .icon2{
+        position: absolute;
+        color: rgb(238, 90, 90) ;
+        z-index: 3;
+       font-size: 20px;
+       margin-top: 5px;
+       
+       }
+       .else{
+        width: 15%;
+        height: 30px;
+        position: absolute;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid rgb(238, 25, 25) ;
+        padding-left: 30px;
+
+       
+       }
+       .submit{
+        width: 40px;
+        height: 40px;
+       }
+       .now{
+        text-decoration: none;
+        
+       }
+       .line1{
+            width: 0px;
+            height: 2px;
+            background-color: orangered;
+            position: absolute;
+            transition: all 2s;
+            left: 50%;
+        }
+        .g1{
+            position: relative;
+        }
+        .g1:hover .line1{
+            width: 100%;
+            left: 0%;
+        }
+       
+        @media screen and (max-width:700px) {
+            .font{
+              display: inline-block;
+              font-size: 30px;
+              color: rgb(22, 21, 21);
+             margin-top: 80px;
+             margin-left: -40px;
+             z-index: 10;
+                         
+            }
+            a{
+                text-decoration: none;
+            }
+            
+
+            .mid{
+                display: none;
+            }
+
+            .mmid{
+            display:block;
+            
+            
+           } 
+          
+            .font:hover .unite {
+               display: flex; 
+              
+            }   
+            a:hover{
+            text-decoration: none;
+            color: red;
+            
+        }
+        .font1{
+            font-size: 25px;
+            text-indent: 5px;
+        }
+        .last{
+            width: 20%;
+            
+        } 
+        .bg{
+           display: none;
+        }
+        .bore{
+            height:60vh ;
+            width: 70%;
+            margin-left: 75px;
+        }
+        .else{
+            width: 50%;
+        }
+        .if{
+            width: 50%;
+        }
+       
+        }
+    </style>
+</head>
+<body>
+   
+        <div class="con1">
+       
+            <div class="menu">
+                <div class="mmid">
+                    <div class="font"><i class="fa-solid fa-bars"></i>
+                       
+                        <nav class="unite">
+                            <div class="g1"><a href="http://127.0.0.1:5500/index.html#">home</a>
+                                <div class="line1"></div></div>
+                                <div class="g1"><a href="http://127.0.0.1:5500/mainlogin.html?#">login</a>
+                                <div class="line1"></div></div>
+                                <div class="g1"><a href="http://127.0.0.1:5500/maincollection.html#" >collections</a>
+                                <div class="line1"></div></div>
+                                <div class="g1"><a href="http://127.0.0.1:5500/maingallery.html#">Gallery</a>
+                                <div class="line1"></div></div>
+                                <div class="g1"><a href="http://127.0.0.1:5500/mainbout.html#" >about</a>
+                                <div class="line1"></div></div>
+                                <div class="g1"><a href="http://127.0.0.1:5500/maincontact.html#">contact</a>
+                                <div class="line1"></div></div>
+                        </nav>
+                       
+                </div>   
+        
+                   </div>
+            <div class="font1">
+                <div><i class="fa-solid fa-gem"></i>KKY MINERALS</div>
+               
+            </div>
+    
+           <div class="mid">
+            <a href="http://127.0.0.1:5500/index.html#">home</a>
+            <a href="http://127.0.0.1:5500/maincollection.html#">collections</a>
+            <a href="http://127.0.0.1:5500/maingallery.html#">Gallery</a>
+           <a href="http://127.0.0.1:5500/mainbout.html#">about</a>
+            <a href="http://127.0.0.1:5500/maincontact.html#" >contact</a>
+           <a href="http://127.0.0.1:5500/mainlogin.html?#">login</a>
+           </div>
+           
+           <div class="last">
+            <div><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div><a href="http://127.0.0.1:5500/mainlogin.html?#"><i class="fa-solid fa-user-plus"></i></a></div>
+           </div>
+            </div>
+            
+           
+           
+        </div>   
+  
+    
+   <div class="cont">
+    <div class="bore">
+        <div class="bore1">
+      <div class="start">
+        <div>log in</div>
+        <div class="startline"></div>
+      </div>
+      <div class=" jp">
+        <div class="input" >
+            <div class="icon"><i class="fa-solid fa-circle-user"></i></div>
+            </i><input type="text" placeholder="enter username" id="t1"class="if" required>
+            <br><br>
+            <div class="icon2"><i class="fa-solid fa-key"></i></div>
+            </i><input type="password" placeholder="enter password" id="t2"  class="else" required>
+    
+        </div>
+        <div ><a href="#">forgot password?</a></div>
+       
+       <a href="#" onclick="login()" class="now"><div  style="width: 70%; height: 50px; background-color: rgb(238, 90, 90) ; border: 2px solid  rgb(238, 90, 90); border-radius: 5px; color: white;text-align: center; font-size: 30px;font-weight: 600 ;margin-top: 30px; padding-top: 6px;">login</div></a> 
+       <script>
+        function login(){
+            let name=document.getElementById("t1").value
+            let password=document.getElementById("t2").value
+            let arr= JSON.parse( localStorage.getItem("arr"))
+
+
+
+            // let uspassword=localStorage.getItem("password")
+            for(let i=0;i<arr.length;i++){
+                console.log(name==arr[i].name && password==arr[i].password)
+                
+                if(name==arr[i].name && password==arr[i].password){
+                    
+                   return window.location="http://127.0.0.1:5500/index.html"
+
+                }
+              
+            }
+            window.location="http://127.0.0.1:5500/mainregister.html"
+        }
+       </script>
+      <br>
+      <div ><a href="http://127.0.0.1:5500/mainregister.html">Don't have account?sign up now</a> </div>
+      </div>
+    </div>
+</div>
+ <div class="bg">
+    <h1>LOGIN</h1>
+    <p>sign up to order the minerals</p>
+ </div>
+   </div>
+  
+
+</div>
+  
+</body>
+</html>
+
+
